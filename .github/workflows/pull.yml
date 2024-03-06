@@ -20,7 +20,7 @@ jobs:
         mkdir ~/.ssh
         echo "${{ secrets.SSH_PRI }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
-        ssh -o StrictHostKeyChecking=no ec2-user@13.233.227.88 << EOF
+        ssh -o StrictHostKeyChecking=no ec2-user@18.217.138.89 << EOF
         sudo su
         docker pull ${{ secrets.DOC_USERNAME }}/test:eee
         docker run -p 80:80 -d ${{ secrets.DOC_USERNAME }}/test:eee
